@@ -79,6 +79,8 @@
     "bootstrap": "v4.3.1",
     "jquery": "^3.3.1",
     "lozad": "^1.14.0",
-    "popper.js": "^1.14.7"
+    "popper.js": "^1.14.7",
+    "skeleton-sass-official": "^3.1.6",
+    "skeleton-scss": "^2.0.4"
   }
 }

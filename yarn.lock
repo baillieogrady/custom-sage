@@ -6263,6 +6263,11 @@ normalize-range@^0.1.2:
   resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
   integrity sha1-LRDAa9/TEuqXd2laTShDlFa3WUI=
 
+normalize-scss@>=5.0.4:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/normalize-scss/-/normalize-scss-7.0.1.tgz#74485e82bb5d0526371136422a09fdb868ffc1a4"
+  integrity sha512-qj16bWnYs+9/ac29IgGjySg4R5qQTp1lXfm7ApFOZNVBYFY8RZ3f8+XQNDDLHeDtI3Ba7Jj4+LuPgz9v/fne2A==
+
 normalize-selector@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/normalize-selector/-/normalize-selector-0.2.0.tgz#d0b145eb691189c63a78d201dc4fdb1293ef0c03"
@@ -8521,6 +8526,18 @@ simple-swizzle@^0.2.2:
   integrity sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo=
   dependencies:
     is-arrayish "^0.3.1"
+
+skeleton-sass-official@^3.1.6:
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/skeleton-sass-official/-/skeleton-sass-official-3.1.6.tgz#823d9a86b8c294ce9d8a67b9dd04e37b0787f9e8"
+  integrity sha512-/L2h9qW/LV+HbYU82AJKmkW4iU1xwR657cIvUkVyM7Unduepm3tcEVy7OW58DJvV4sMsi9X8hYjGy5gdxZcHTw==
+  dependencies:
+    normalize-scss ">=5.0.4"
+
+skeleton-scss@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/skeleton-scss/-/skeleton-scss-2.0.4.tgz#79b52e1e1ab2067e9fa5c681ad18f36b48b26470"
+  integrity sha1-ebUuHhqyBn6fpcaBrRjza0iyZHA=
 
 slash@^1.0.0:
   version "1.0.0"
