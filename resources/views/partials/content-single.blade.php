@@ -2,6 +2,7 @@
   <header>
     <h1 class="entry-title">{!! get_the_title() !!}</h1>
     @include('partials/entry-meta')
+    <img data-src={{ the_post_thumbnail_url('post') }} alt="Post image" class="lozad">
   </header>
   <div class="entry-content">
     @php the_content() @endphp
