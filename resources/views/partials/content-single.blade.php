@@ -1,5 +1,5 @@
 <article @php post_class() @endphp>
-  <header>
+  <header class="pa2">
     <h1 class="entry-title">{!! get_the_title() !!}</h1>
     @include('partials/entry-meta')
     <img data-src={{ the_post_thumbnail_url('post') }} alt="Post image" class="lozad">

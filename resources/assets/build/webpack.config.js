@@ -11,6 +11,10 @@ const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const desire = require('./util/desire');
 const config = require('./config');
 
+// purgecss
+const glob = require('glob-all');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
+
 const assetsFilenames = (config.enabled.cacheBusting) ? config.cacheBusting : '[name]';
 
 let webpackConfig = {
@@ -182,6 +186,20 @@ let webpackConfig = {
       syntax: 'scss',
     }),
     new FriendlyErrorsWebpackPlugin(),
+    // purgecss
+    new PurgecssPlugin({
+      paths: glob.sync([
+        'app/**/*.php',
+        'resources/views/**/*.php',
+        'resources/assets/scripts/**/*.js',
+      ]),
+      // whitelist: [ // Only if you need it!
+      //   'pr3', 'pv2', 'ph3',
+      //   'mb1',
+      //   'input',
+      //   'tracked-mega'
+      // ],
+    }),
   ],
 };
 

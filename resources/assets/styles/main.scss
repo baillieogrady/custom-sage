@@ -1,7 +1,7 @@
 @import "common/variables";
 
 /** Import everything from autoload */
-@import "./autoload/**/*";
+// @import "./autoload/**/*";
 
 /**
  * Import npm dependencies
@@ -10,7 +10,8 @@
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 
-@import "~skeleton-scss/scss/skeleton";
+// @import "~skeleton-scss/scss/skeleton";
+@import "~tachyons-sass/tachyons.scss";
 
 /** Import theme styles */
 @import "common/global";
