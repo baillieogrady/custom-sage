@@ -63,6 +63,14 @@ let webpackConfig = {
         ],
       },
       {
+        test: /\.jsx$/,
+        exclude: [/(node_modules|bower_components)(?![/|\\](bootstrap|foundation-sites))/],
+        loader: 'babel',
+        query: {
+          presets: ['es2015', 'react', 'stage-0'],
+        },
+      },
+      {
         test: /\.css$/,
         include: config.paths.assets,
         use: ExtractTextPlugin.extract({
