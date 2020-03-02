@@ -10,6 +10,7 @@ module.exports = ({ file, options }) => {
     plugins: {
       autoprefixer: true,
       cssnano: options.enabled.optimize ? cssnanoConfig : false,
+      tailwindcss: `${options.paths.assets}/styles/tailwind.js`,
     },
   };
 };

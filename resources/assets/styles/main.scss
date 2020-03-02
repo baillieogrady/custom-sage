@@ -1,17 +1,19 @@
-@import "common/variables";
+/** Tailwind base styles */
+@tailwind base;
 
 /** Import everything from autoload */
 // @import "./autoload/**/*";
 
-/**
- * Import npm dependencies
- *
- * Prefix your imports with `~` to grab from node_modules/
- * @see https://github.com/webpack-contrib/sass-loader#imports
- */
+/** Tailwind plugins */
+@tailwind components;
 
-// @import "~skeleton-scss/scss/skeleton";
-@import "~tachyons-sass/tachyons.scss";
+/** global */
+
+@import "common/variables";
+
+/** Import npm dependencies */
+
+/** @import "~tachyons-sass/tachyons.scss"; */
 
 /** Import theme styles */
 @import "common/global";
@@ -21,3 +23,8 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+
+/** Tailwind utilities */
+@tailwind utilities;
+
+/** Define custom utilities */
