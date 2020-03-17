@@ -1,11 +1,11 @@
 /** Tailwind base styles */
-@tailwind base;
+// @tailwind base;
 
 /** Import everything from autoload */
 // @import "./autoload/**/*";
 
 /** Tailwind plugins */
-@tailwind components;
+// @tailwind components;
 
 /** global */
 
@@ -25,6 +25,6 @@
 @import "layouts/tinymce";
 
 /** Tailwind utilities */
-@tailwind utilities;
+// @tailwind utilities;
 
 /** Define custom utilities */
