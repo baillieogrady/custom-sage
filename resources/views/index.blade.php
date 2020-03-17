@@ -2,7 +2,6 @@
 
 @section('content')
   @include('partials.page-header')
-  
   {{-- <div id="posts"></div> --}}
 {{--   
   @if (!have_posts())

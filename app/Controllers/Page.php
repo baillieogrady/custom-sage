@@ -1,10 +1,10 @@
 <?php
 
-// namespace App\Controllers;
+namespace App\Controllers;
 
-// use Sober\Controller\Controller;
+use Sober\Controller\Controller;
 
-// class Page extends Controller
-// {
-//     use Partials\PageBuilder;
-// }
+class Page extends Controller
+{
+    // use Partials\PageBuilder;
+}
