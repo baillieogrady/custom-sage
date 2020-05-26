@@ -1,0 +1,18 @@
+/** Tailwind base styles */
+@tailwind base;
+
+/** Import everything from autoload */
+
+/** Tailwind plugins */
+@tailwind components;
+
+/** global */
+
+/** Import npm dependencies */
+
+/** Import theme styles */
+
+/** Tailwind utilities */
+@tailwind utilities;
+
+/** Define custom utilities */

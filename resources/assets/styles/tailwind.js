@@ -1,7 +1,10 @@
-// module.exports = {
-//   theme: {
-//     extend: {},
-//   },
-//   variants: {},
-//   plugins: [],
-// }
+module.exports = {
+    theme: {
+        fontFamily: {
+            'body': ['Roboto']
+        }
+    },
+    variants: {},
+    plugins: [],
+    purge: false,
+}

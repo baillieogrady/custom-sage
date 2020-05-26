@@ -12,7 +12,7 @@
   SupportsMultiple: true
 --}}
 
-<section class="Hero mb4 mb5-ns">
+<section class="container bg-red-600">
     <div class="mw8 center ph3 cf">
       <div class="fl w-100 w-70-ns">
         <div>

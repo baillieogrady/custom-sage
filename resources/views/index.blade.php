@@ -2,6 +2,11 @@
 
 @section('content')
   @include('partials.page-header')
+  <div class="container lg:max-w-6xl mx-auto px-2 font-black">
+    <div class="bg-gray-300">
+      container
+    </div>
+  </div>
   {{-- <div id="posts"></div> --}}
 {{--   
   @if (!have_posts())
