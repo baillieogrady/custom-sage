@@ -11,6 +11,7 @@ Custom sage is a slightly customised Sage starter theme.
 * ACF page builder
 * Lazyload images
 * Purgecss
+* TailwindCSS
 
 ## Features
 
