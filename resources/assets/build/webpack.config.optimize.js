@@ -31,5 +31,12 @@ module.exports = {
         },
       },
     }),
+    new PurgecssPlugin({
+      paths: glob.sync([
+        'app/**/*.php',
+        'resources/views/**/*.php',
+        'resources/assets/scripts/**/*.js',
+      ]),
+    }),
   ],
 };

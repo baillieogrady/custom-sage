@@ -1,18 +1,11 @@
-/** Tailwind base styles */
 @tailwind base;
 
-/** Import everything from autoload */
+/*! purgecss start ignore  */
 
-/** Tailwind plugins */
+@import 'base.css';
+@import 'blocks/nav.css';
+
+/*! purgecss end ignore  */
+
 @tailwind components;
-
-/** global */
-
-/** Import npm dependencies */
-
-/** Import theme styles */
-
-/** Tailwind utilities */
 @tailwind utilities;
-
-/** Define custom utilities */

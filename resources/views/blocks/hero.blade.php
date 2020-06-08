@@ -1,9 +1,9 @@
 {{--
   Title: Hero
-  Description: Hero Text
+  Description: Hero
   Category: layout
-  Icon: editor-alignleft
-  Keywords: Hero Heroduction text
+  Icon: default
+  Keywords: Hero block
   Mode: edit
   Align: left
   PostTypes: page
@@ -12,12 +12,8 @@
   SupportsMultiple: true
 --}}
 
-<section class="container bg-red-600">
-    <div class="mw8 center ph3 cf">
-      <div class="fl w-100 w-70-ns">
-        <div>
-            {!! get_field('heading') !!}
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="container">
+  <p>
+    I'm a hero
+  </p>
+</section>

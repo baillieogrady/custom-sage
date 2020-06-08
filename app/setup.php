@@ -20,6 +20,11 @@ add_action('wp_enqueue_scripts', function () {
     }
 }, 100);
 
+// gutenberg editor styles
+add_action('enqueue_block_editor_assets', function () {
+    wp_enqueue_style('sage/gutenberg.css', asset_path('styles/gutenberg.css'), false, null);
+});
+
 /**
  * Theme setup
  */
@@ -157,3 +162,40 @@ add_action('after_setup_theme', function () {
         }
     });
 });
+
+// Disable Gutenberg editor default styles.
+add_action( 'wp_enqueue_scripts', function() {
+    wp_dequeue_style( 'wp-block-library' ); // Wordpress core
+    wp_dequeue_style( 'wp-block-library-theme' ); // Wordpress core
+    wp_dequeue_style( 'wc-block-style' ); // WooCommerce
+}, 100 );
+
+
+// remove embed.js
+add_action( 'wp_footer', function(){
+  wp_deregister_script( 'wp-embed' );
+} );
+
+
+// remove jquery migrate
+add_action( 'wp_default_scripts', function ( $scripts ) {
+    if ( ! is_admin() && ! empty( $scripts->registered['jquery'] ) ) {
+        $scripts->registered['jquery']->deps = array_diff(
+            $scripts->registered['jquery']->deps,
+            [ 'jquery-migrate' ]
+        );
+    }
+} );
+
+// remove emojis
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 ); 
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' ); 
+remove_action( 'wp_print_styles', 'print_emoji_styles' ); 
+remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
+// limiting posts per archive 
+// add_action( 'pre_get_posts', function( $query ) {
+// if ( $query->is_archive() && $query->is_main_query() && !is_admin() ) {
+//         $query->set( 'posts_per_page', 1 );
+//     }
+// } );

@@ -8107,11 +8107,6 @@ normalize-range@^0.1.2:
   resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
   integrity sha1-LRDAa9/TEuqXd2laTShDlFa3WUI=
 
-normalize-scss@>=5.0.4:
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/normalize-scss/-/normalize-scss-7.0.1.tgz#74485e82bb5d0526371136422a09fdb868ffc1a4"
-  integrity sha512-qj16bWnYs+9/ac29IgGjySg4R5qQTp1lXfm7ApFOZNVBYFY8RZ3f8+XQNDDLHeDtI3Ba7Jj4+LuPgz9v/fne2A==
-
 normalize-selector@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/normalize-selector/-/normalize-selector-0.2.0.tgz#d0b145eb691189c63a78d201dc4fdb1293ef0c03"
@@ -8953,6 +8948,16 @@ postcss-html@^0.12.0:
     remark "^8.0.0"
     unist-util-find-all-after "^1.0.1"
 
+postcss-import@^12.0.1:
+  version "12.0.1"
+  resolved "https://registry.yarnpkg.com/postcss-import/-/postcss-import-12.0.1.tgz#cf8c7ab0b5ccab5649024536e565f841928b7153"
+  integrity sha512-3Gti33dmCjyKBgimqGxL3vcV8w9+bsHwO5UrBawp796+jdardbcFl4RP5w/76BwNL7aGzpKstIfF9I+kdE8pTw==
+  dependencies:
+    postcss "^7.0.1"
+    postcss-value-parser "^3.2.3"
+    read-cache "^1.0.0"
+    resolve "^1.1.7"
+
 postcss-js@^2.0.0:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/postcss-js/-/postcss-js-2.0.3.tgz#a96f0f23ff3d08cec7dc5b11bf11c5f8077cdab9"
@@ -9153,7 +9158,7 @@ postcss-modules-values@^1.3.0:
     icss-replace-symbols "^1.1.0"
     postcss "^6.0.1"
 
-postcss-nested@^4.1.1:
+postcss-nested@^4.1.1, postcss-nested@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/postcss-nested/-/postcss-nested-4.2.1.tgz#4bc2e5b35e3b1e481ff81e23b700da7f82a8b248"
   integrity sha512-AMayXX8tS0HCp4O4lolp4ygj9wBn32DJWXvG6gCv+ZvJrEa00GUxJcJEEzMh87BIe6FrWdYkpR2cuyqHKrxmXw==
@@ -9760,6 +9765,13 @@ read-all-stream@^3.0.0:
     pinkie-promise "^2.0.0"
     readable-stream "^2.0.0"
 
+read-cache@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/read-cache/-/read-cache-1.0.0.tgz#e664ef31161166c9751cdbe8dbcf86b5fb58f774"
+  integrity sha1-5mTvMRYRZsl1HNvo28+GtftY93Q=
+  dependencies:
+    pify "^2.3.0"
+
 read-pkg-up@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/read-pkg-up/-/read-pkg-up-1.0.1.tgz#9d63c13276c065918d57f002a57f40a1b643fb02"
@@ -10204,6 +10216,13 @@ resolve-url@^0.2.1:
   resolved "https://registry.yarnpkg.com/resolve-url/-/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
   integrity sha1-LGN/53yJOv0qZj/iGqkIAGjiBSo=
 
+resolve@^1.1.7:
+  version "1.17.0"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.17.0.tgz#b25941b54968231cc2d1bb76a79cb7f2c0bf8444"
+  integrity sha512-ic+7JYiV8Vi2yzQGFWOkiZD5Z9z7O2Zhm9XMaTxdJExKasieFCr+yXZ/WmXsckHiKl12ar0y6XiXDx3m4RHn1w==
+  dependencies:
+    path-parse "^1.0.6"
+
 resolve@^1.10.0, resolve@^1.13.1, resolve@^1.14.2, resolve@^1.6.0:
   version "1.15.1"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.15.1.tgz#27bdcdeffeaf2d6244b95bb0f9f4b4653451f3e8"
@@ -10599,18 +10618,6 @@ simple-swizzle@^0.2.2:
   integrity sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo=
   dependencies:
     is-arrayish "^0.3.1"
-
-skeleton-sass-official@^3.1.6:
-  version "3.1.6"
-  resolved "https://registry.yarnpkg.com/skeleton-sass-official/-/skeleton-sass-official-3.1.6.tgz#823d9a86b8c294ce9d8a67b9dd04e37b0787f9e8"
-  integrity sha512-/L2h9qW/LV+HbYU82AJKmkW4iU1xwR657cIvUkVyM7Unduepm3tcEVy7OW58DJvV4sMsi9X8hYjGy5gdxZcHTw==
-  dependencies:
-    normalize-scss ">=5.0.4"
-
-skeleton-scss@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/skeleton-scss/-/skeleton-scss-2.0.4.tgz#79b52e1e1ab2067e9fa5c681ad18f36b48b26470"
-  integrity sha1-ebUuHhqyBn6fpcaBrRjza0iyZHA=
 
 slash@^1.0.0:
   version "1.0.0"
@@ -11372,18 +11379,6 @@ table@^4.0.1:
     lodash "^4.17.4"
     slice-ansi "1.0.0"
     string-width "^2.1.1"
-
-tachyons-custom@^4.9.5:
-  version "4.9.8"
-  resolved "https://registry.yarnpkg.com/tachyons-custom/-/tachyons-custom-4.9.8.tgz#406e539bbd417db8de8b93561ef6d36ca7c50580"
-  integrity sha512-MVnslsN5dFswmh2+Sw+OOA4/6pQfnJrA8/wrtaf+Px347wze3MIk3lp3Q3QmbUPqrJda79s0dZtY3dgTwVHdfg==
-
-tachyons-sass@^4.9.5:
-  version "4.9.5"
-  resolved "https://registry.yarnpkg.com/tachyons-sass/-/tachyons-sass-4.9.5.tgz#98d7924f72dfcdc940ccc331f304b85952434799"
-  integrity sha512-GPPUIoM+8OkaHF7Ii8+AE5AQzVekfrRnGv55oXYTspXw8BMThmiXr/HrCUmYGiuSnBG73T0862tvzqLGP8B/Mg==
-  dependencies:
-    tachyons-custom "^4.9.5"
 
 tailwindcss@^1.2.0:
   version "1.2.0"

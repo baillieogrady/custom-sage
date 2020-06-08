@@ -106,3 +106,61 @@ add_filter('wp_get_attachment_image_attributes', function ($attr, $attachment) {
 
     return $attr;
 }, 10, 2);
+
+// contain all native gtunenberg blocks
+add_filter( 'render_block', function ( $block_content, $block ) {
+    $blocks = [
+        'archives',
+        'audio',
+        'button',
+        'categories',
+        'code',
+        'column',
+        'columns',
+        'coverImage',
+        'embed',
+        'file',
+        'freeform',
+        'gallery',
+        'heading',
+        'image',
+        'latestComments',
+        'latestPosts',
+        'list',
+        'more',
+        'nextpage',
+        'paragraph',
+        'preformatted',
+        'pullquote',
+        'quote',
+        'reusableBlock',
+        'separator',
+        'shortcode',
+        'spacer',
+        'subhead',
+        'table',
+        'textColumns',
+        'verse',
+        'video',
+    ]; 
+    foreach($blocks as $b) {
+        if ( $block['blockName'] === 'core/' . $b ) {
+            $block_content = '<div class="container">' . $block_content . '</div>';
+        }
+    }
+  return $block_content;
+}, 10, 2 );
+
+// defer javascript
+add_filter( 'script_loader_tag', function( $url ) {
+    if ( is_user_logged_in() ) return $url; //don't break WP Admin
+    if ( FALSE === strpos( $url, '.js' ) ) return $url;
+    if ( strpos( $url, 'jquery.js' ) ) return $url;
+    return str_replace( ' src', ' defer src', $url );
+}, 10 );
+
+// remove default editor styles
+add_filter( 'block_editor_settings' , function( $settings ) {
+    unset($settings['styles'][0]);
+    return $settings;
+} );

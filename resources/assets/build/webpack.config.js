@@ -11,6 +11,12 @@ const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const desire = require('./util/desire');
 const config = require('./config');
 
+class TailwindExtractor {
+  static extract(content) {
+    return content.match(/[A-z0-9-:\/]+/g) || [];
+  }
+}
+
 // purgecss
 const glob = require('glob-all');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
@@ -201,12 +207,12 @@ let webpackConfig = {
         'resources/views/**/*.php',
         'resources/assets/scripts/**/*.js',
       ]),
-      // whitelist: [ // Only if you need it!
-      //   'pr3', 'pv2', 'ph3',
-      //   'mb1',
-      //   'input',
-      //   'tracked-mega'
-      // ],
+      extractors: [
+        {
+          extractor: TailwindExtractor,
+          extensions: ["js", "php"]
+        }
+      ],
     }),
   ],
 };

@@ -6,6 +6,9 @@
     ],
     "customizer": [
       "./scripts/customizer.js"
+    ],
+    "gutenberg": [
+      "./styles/gutenberg.css"
     ]
   },
   "publicPath": "/wp-content/themes/custom-sage",

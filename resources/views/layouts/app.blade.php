@@ -2,10 +2,10 @@
 <html {!! get_language_attributes() !!}>
   @include('partials.head')
   <body @php body_class() @endphp>
-    <div class="wrapper" role="document">
+    <div class="flex flex-col min-h-screen" role="document">
       @php do_action('get_header') @endphp
       @include('partials.header')
-      <main class="main">
+      <main class="flex flex-col flex-grow">
         @yield('content')
       </main>
       {{-- @if (App\display_sidebar())
