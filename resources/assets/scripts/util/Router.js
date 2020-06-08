@@ -1,4 +1,5 @@
 import camelCase from './camelCase';
+import 'custom-event-polyfill';
 
 /**
  * DOM-based Routing
@@ -32,7 +33,7 @@ class Router {
         fn: event,
       },
     }));
-    
+
     const fire = route !== '' && this.routes[route] && typeof this.routes[route][event] === 'function';
     if (fire) {
       this.routes[route][event](arg);
