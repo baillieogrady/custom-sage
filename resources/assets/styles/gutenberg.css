@@ -1,29 +1,43 @@
-@tailwind base;
-@tailwind components;
-
-/*! purgecss start ignore */
+/* ! purgecss start ignore */
 
 [data-type*="core/"] {
+    p,
     h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
-        @apply leading-tight text-lg;
+        @apply leading-normal;
     }
 
-    figure {
-        @apply m-0;
+    p,
+    ul,
+    ol,
+    blockquote,
+    i,
+    em {
+        @apply text-base;
     }
 
-    p {
-        @apply mb-8;
+    ul {
+        @apply list-disc;
     }
 
     ol {
         @apply list-decimal;
     }
+
+    figure {
+        @apply m-0;
+    }
+}
+
+/* [data-type*="acf/"] */
+
+/* fix sidebar editor margin issue */
+.edit-post-sidebar .acf-block-panel .acf-block-fields {
+    @apply m-0 !important;
 }
 
 /*! purgecss end ignore */

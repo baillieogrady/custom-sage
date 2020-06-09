@@ -4,12 +4,12 @@ namespace App;
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-$icons = new FieldsBuilder('Icons');
+$hero = new FieldsBuilder('Hero');
 
-$icons
+$hero
 ->setLocation('block', '==', 'acf/hero');
 
-$icons
-    ->addFields(get_field_partial('partials.heading'));
+$hero
+    ->addImage('image');
 
-return $icons;
+return $hero;

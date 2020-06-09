@@ -2,18 +2,22 @@
   Title: Hero
   Description: Hero
   Category: layout
-  Icon: default
+  Icon:
   Keywords: Hero block
   Mode: edit
-  Align: left
+  Align: center
   PostTypes: page
-  SupportsAlign: left right
-  SupportsMode: false
+  SupportsAlign: center
+  SupportsMode: true
   SupportsMultiple: true
 --}}
 
+@php
+    $image = get_field('image');
+@endphp
+
 <section class="container">
-  <p>
-    I'm a hero
-  </p>
+<div style="background-image: url('{{ $image['url'] }}');" class="h-64 bg-cover bg-center flex justi">
+    <p class="text-white">Hello</p>
+  </div>
 </section>

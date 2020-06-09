@@ -94,62 +94,62 @@ add_filter('comments_template', function ($comments_template) {
 /**
  * Use Lozad (lazy loading) for attachments/featured images
  */
-add_filter('wp_get_attachment_image_attributes', function ($attr, $attachment) {
-    // Bail on admin
-    if (is_admin()) {
-        return $attr;
-    }
+// add_filter('wp_get_attachment_image_attributes', function ($attr, $attachment) {
+//     // Bail on admin
+//     if (is_admin()) {
+//         return $attr;
+//     }
 
-    $attr['data-src'] = $attr['src'];
-    $attr['class'] .= ' lozad';
-    unset($attr['src']);
+//     $attr['data-src'] = $attr['src'];
+//     $attr['class'] .= ' lozad';
+//     unset($attr['src']);
 
-    return $attr;
-}, 10, 2);
+//     return $attr;
+// }, 10, 2);
 
 // contain all native gtunenberg blocks
-add_filter( 'render_block', function ( $block_content, $block ) {
-    $blocks = [
-        'archives',
-        'audio',
-        'button',
-        'categories',
-        'code',
-        'column',
-        'columns',
-        'coverImage',
-        'embed',
-        'file',
-        'freeform',
-        'gallery',
-        'heading',
-        'image',
-        'latestComments',
-        'latestPosts',
-        'list',
-        'more',
-        'nextpage',
-        'paragraph',
-        'preformatted',
-        'pullquote',
-        'quote',
-        'reusableBlock',
-        'separator',
-        'shortcode',
-        'spacer',
-        'subhead',
-        'table',
-        'textColumns',
-        'verse',
-        'video',
-    ]; 
-    foreach($blocks as $b) {
-        if ( $block['blockName'] === 'core/' . $b ) {
-            $block_content = '<div class="container">' . $block_content . '</div>';
-        }
-    }
-  return $block_content;
-}, 10, 2 );
+// add_filter( 'render_block', function ( $block_content, $block ) {
+//     $blocks = [
+//         'archives',
+//         'audio',
+//         'button',
+//         'categories',
+//         'code',
+//         'column',
+//         'columns',
+//         'coverImage',
+//         'embed',
+//         'file',
+//         'freeform',
+//         'gallery',
+//         'heading',
+//         'image',
+//         'latestComments',
+//         'latestPosts',
+//         'list',
+//         'more',
+//         'nextpage',
+//         'paragraph',
+//         'preformatted',
+//         'pullquote',
+//         'quote',
+//         'reusableBlock',
+//         'separator',
+//         'shortcode',
+//         'spacer',
+//         'subhead',
+//         'table',
+//         'textColumns',
+//         'verse',
+//         'video',
+//     ]; 
+//     foreach($blocks as $b) {
+//         if ( $block['blockName'] === 'core/' . $b ) {
+//             $block_content = '<div class="container">' . $block_content . '</div>';
+//         }
+//     }
+//   return $block_content;
+// }, 10, 2 );
 
 // defer javascript
 add_filter( 'script_loader_tag', function( $url ) {
