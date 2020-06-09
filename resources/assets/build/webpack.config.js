@@ -11,16 +11,6 @@ const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const desire = require('./util/desire');
 const config = require('./config');
 
-class TailwindExtractor {
-  static extract(content) {
-    return content.match(/[A-z0-9-:\/]+/g) || [];
-  }
-}
-
-// purgecss
-const glob = require('glob-all');
-const PurgecssPlugin = require('purgecss-webpack-plugin');
-
 const assetsFilenames = (config.enabled.cacheBusting) ? config.cacheBusting : '[name]';
 
 let webpackConfig = {
@@ -200,20 +190,6 @@ let webpackConfig = {
       syntax: 'scss',
     }),
     new FriendlyErrorsWebpackPlugin(),
-    // purgecss
-    new PurgecssPlugin({
-      paths: glob.sync([
-        'app/**/*.php',
-        'resources/views/**/*.php',
-        'resources/assets/scripts/**/*.js',
-      ]),
-      extractors: [
-        {
-          extractor: TailwindExtractor,
-          extensions: ["js", "php"]
-        }
-      ],
-    }),
   ],
 };
 

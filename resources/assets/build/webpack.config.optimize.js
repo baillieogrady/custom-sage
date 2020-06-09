@@ -6,6 +6,16 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const config = require('./config');
 
+// purgecss
+const glob = require('glob-all');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
+
+class TailwindExtractor {
+  static extract(content) {
+    return content.match(/[A-z0-9-:\/]+/g) || [];
+  }
+}
+
 module.exports = {
   plugins: [
     new ImageminPlugin({
@@ -31,12 +41,19 @@ module.exports = {
         },
       },
     }),
+    // purgecss
     new PurgecssPlugin({
       paths: glob.sync([
         'app/**/*.php',
         'resources/views/**/*.php',
         'resources/assets/scripts/**/*.js',
       ]),
+      extractors: [
+        {
+          extractor: TailwindExtractor,
+          extensions: ["js", "php"]
+        }
+      ],
     }),
   ],
 };
