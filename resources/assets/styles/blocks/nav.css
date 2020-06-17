@@ -6,7 +6,7 @@
             @apply m-0 mb-2;
         }
         > li.current-menu-item > a {
-            @apply text-brand-primary;
+            @apply text-brand-blue;
         }
     }
     li::before {
@@ -16,7 +16,7 @@
     a {
         @apply block no-underline mb-3 text-lg transition ease-in duration-200;
         &:hover {
-            @apply text-brand-primary;
+            @apply text-brand-blue;
         }
     }
 }
@@ -27,7 +27,7 @@
         @apply p-0 py-1 m-0;
     }
     > li.current-menu-item > a {
-        @apply text-brand-primary;
+        @apply text-brand-blue;
     }
     a {
         @apply p-0 border-none border-0;
@@ -45,7 +45,7 @@
                 }
             }
             li.current-menu-item > a {
-                @apply text-brand-primary;
+                @apply text-brand-blue;
             }
         }
         a {

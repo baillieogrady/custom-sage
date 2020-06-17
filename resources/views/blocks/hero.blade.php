@@ -1,9 +1,9 @@
 {{--
   Title: Hero
-  Description: Hero
-  Category: layout
+  Description: hero block
+  Category: banter
   Icon:
-  Keywords: Hero block
+  Keywords: hero block
   Mode: edit
   Align: center
   PostTypes: page
@@ -16,8 +16,10 @@
     $image = get_field('image');
 @endphp
 
-<section class="container">
-<div style="background-image: url('{{ $image['url'] }}');" class="h-64 bg-cover bg-center flex justi">
-    <p class="text-white">Hello</p>
+<section>
+  <div style="background-image: url('{{ $image['url'] }}');" class="h-64 bg-cover bg-center flex justify-center items-center">
+    <h1 class="text-white text-6xl">
+      Heading
+    </h1>
   </div>
 </section>

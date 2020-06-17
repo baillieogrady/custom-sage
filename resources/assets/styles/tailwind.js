@@ -1,5 +1,6 @@
 module.exports = {
     theme: {
+        // prefix: 'tw-',
         container: {
             center: true,
             padding: {
@@ -14,7 +15,7 @@ module.exports = {
         // },
         extend: {
             colors: {
-                'brand-primary': '#239FC6'
+                'brand-blue': '#239FC6'
             },
             inset: {
                 'half': '50%',
