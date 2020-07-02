@@ -8,10 +8,11 @@ Custom sage is a slightly customised Sage starter theme.
 ## Custom Features
 
 * Custom Gutenberg blocks
-* ACF page builder
+* ACF flexible content page builder
 * Lazyload images
 * Purgecss
 * TailwindCSS
+* React
 
 ## Features
 
