@@ -4,8 +4,8 @@
         height: 320px;
     }
     &__second {
-        width: 430px;
-        height: 320px;
+        width: 465px;
+        height: 356px;
         border-width: 1rem;
     }
 
@@ -13,9 +13,9 @@
         position: relative;
         &::before {
             content: '';
-            width: 90px;
+            width: 140px;
             height: 820px;
-            @apply absolute -right-brand-2 border-4 border-brand-primary z-0 -top-brand-12;
+            @apply absolute right-0 border-4 border-brand-primary z-0 -top-brand-12;
         }
     }
 }

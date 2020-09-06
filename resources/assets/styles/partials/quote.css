@@ -1,0 +1,5 @@
+.quote {
+    p {
+        @apply mb-0;
+    }
+}

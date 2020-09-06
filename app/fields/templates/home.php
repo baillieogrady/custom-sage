@@ -39,8 +39,8 @@ $home
             'label' => 'display image'
         ])
     ->endGroup()
-    ->addGroup('heading_images_2', [
-        'label' => 'Heading & Images'
+    ->addGroup('images_quote', [
+        'label' => 'Images & quote'
     ])
         ->addText('heading')
         ->addWysiwyg('text')
@@ -50,7 +50,7 @@ $home
         ->addImage('bottom_image', [
             'label' => 'Bottom Image'
         ])
-        ->addTextArea('quote')
+        ->addWysiwyg('quote')
     ->endGroup();
 
 return $home;
