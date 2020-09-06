@@ -11,7 +11,7 @@
       "./styles/gutenberg.css"
     ]
   },
-  "publicPath": "/wp-content/themes/custom-sage",
+  "publicPath": "/wp-content/themes/gutwerk-sage",
   "devUrl": "http://localhost:8000",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",

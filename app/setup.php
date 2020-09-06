@@ -50,7 +50,8 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'sage')
+        'primary_navigation' => __('Primary Navigation', 'sage'),
+        'secondary_navigation' => __('Secondary Navigation', 'sage')
     ]);
 
     /**
@@ -58,7 +59,7 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
      */
     add_theme_support('post-thumbnails');
-    add_image_size('post', 1920, 1080, true);
+    add_image_size('display', 1080, 540, true);
 
     /**
      * Enable HTML5 markup support
@@ -152,7 +153,7 @@ add_action('after_setup_theme', function () {
             });
 
             // custom gutenberg blocks
-            collect(glob(config('theme.dir') . '/app/fields/blocks/*.php'))->map(function ($field) {
+            collect(glob(config('theme.dir') . '/app/fields/templates/*.php'))->map(function ($field) {
                 return require_once($field);
             })->map(function ($field) {
                 if ($field instanceof FieldsBuilder) {

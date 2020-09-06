@@ -1,11 +1,15 @@
-@tailwind base;
+@import 'tailwindcss/base';
 
 /*! purgecss start ignore  */
 
 @import 'base.css';
-@import 'blocks/nav.css';
+@import 'partials/nav.css';
+@import 'partials/burger.css';
+@import 'partials/boxes.css';
+@import 'partials/footer.css';
+@import 'partials/heading-images.css';
 
 /*! purgecss end ignore  */
 
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';

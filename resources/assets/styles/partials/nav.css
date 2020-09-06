@@ -1,4 +1,4 @@
-.nav {
+/* .nav {
     @apply w-full hidden flex-grow;
     > ul {
         @apply list-none ml-0 inline;
@@ -66,4 +66,4 @@
     &:hover .sub-menu {
         @apply block;
     }
-}
+} */

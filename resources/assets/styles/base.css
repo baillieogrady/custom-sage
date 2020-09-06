@@ -1,24 +1,11 @@
 body {
-    @apply text-base leading-normal;
+    @apply text-2xl leading-normal;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    @apply leading-tight text-lg;
+h1 {
+    @apply text-brand-h1 leading-snug;
 }
 
-figure {
-    @apply m-0;
-}
-
-p {
-    @apply mb-8;
-}
-
-ol {
-    @apply list-decimal;
+h2 {
+    @apply text-brand-h2 font-bold leading-tight;
 }

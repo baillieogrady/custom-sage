@@ -1,0 +1,13 @@
+.footer {
+    &__logo {
+        width: 420px;
+    }
+    &__images {
+        img:first-child {
+            width: 230px;
+        }
+        img:last-child {
+            width: 100px;
+        }
+    }
+}

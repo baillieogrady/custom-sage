@@ -3,30 +3,41 @@
  * Global Settings Page
  */
 
-// namespace App;
+namespace App;
 
-// use StoutLogic\AcfBuilder\FieldsBuilder;
+use StoutLogic\AcfBuilder\FieldsBuilder;
 
-// if (function_exists('acf_add_options_page')) {
-//     acf_add_options_page(array(
-//         'page_title'    => 'Global Settings',
-//         'menu_title'    => 'Global Settings',
-//         'menu_slug'     => 'global-settings',
-//         'capability'    => 'edit_posts',
-//         'redirect'      => false
-//     ));
-// }
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page(array(
+        'page_title'    => 'Theme Settings',
+        'menu_title'    => 'Theme Settings',
+        'menu_slug'     => 'theme-settings',
+        'capability'    => 'edit_posts',
+        'redirect'      => false
+    ));
+}
 
-// $social = new FieldsBuilder('Social');
+$theme = new FieldsBuilder('Theme');
 
-// $social
-//     ->setLocation('options_page', '==', 'global-settings');
+$theme
+    ->setLocation('options_page', '==', 'theme-settings');
 
-// $social
-//     ->addUrl('depop')
-//     ->addText('email')
-//     ->addTrueFalse('banner')
-//     ->addText('text')
-//     ->conditional('banner', '==', '1');
+$theme
+    ->addTab('header', [
+        'placement' => 'left'
+    ])
+        ->addImage('logo')
+    ->addTab('footer', [
+        'placement' => 'left'
+    ])
+        ->addWysiwyg('text')
+        ->addImage('footer_logo', [
+            'label' => 'Logo'
+        ])
+        ->addGallery('images', [
+            'max' => 2
+        ])
+        ->addUrl('facebook')
+        ->addUrl('instagram');
 
-// return $social;
+return $theme;

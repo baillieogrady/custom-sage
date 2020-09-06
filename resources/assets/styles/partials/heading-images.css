@@ -1,0 +1,21 @@
+.heading-images {
+    &__first {
+        width: 405px;
+        height: 320px;
+    }
+    &__second {
+        width: 430px;
+        height: 320px;
+        border-width: 1rem;
+    }
+
+    &__box {
+        position: relative;
+        &::before {
+            content: '';
+            width: 90px;
+            height: 820px;
+            @apply absolute -right-brand-2 border-4 border-brand-primary z-0 -top-brand-12;
+        }
+    }
+}
