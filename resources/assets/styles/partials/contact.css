@@ -1,0 +1,7 @@
+.contact {
+    &__address {
+        p {
+            @apply mb-0;
+        }
+    }
+}

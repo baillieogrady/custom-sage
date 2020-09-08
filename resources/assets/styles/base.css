@@ -7,7 +7,7 @@ h1 {
 }
 
 h2 {
-    @apply text-brand-h2 font-bold leading-tight;
+    @apply text-brand-h2 leading-tight;
 }
 
 p {

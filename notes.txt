@@ -1,23 +1,16 @@
 Project plan - Gutwerk
 
-Building at desktop
-
-reman regular
-Averta-light
-Segoe UI light
-Segoe UI semibold
-Segoe UI bold
-Segoe UI regular
-Segoe UI semilight
-
 - Tasks
 
-Base*
-Global fields*
-page templates
+Base (DONE)
+Global fields (DONE)
+page templates (DONE)
+Fonts (DONE)
 Responsive
 Optimise
 Handover
+
+Contact form
 
 
 Breakdown
@@ -36,12 +29,13 @@ Footer
 
 - - Page templates
 
-Home - startseite*
-Company - Ueber
-Service - service
-Contact - Kontact
-References - Referzen
-Default
+Home - startseite (DONE)
+Company - Ueber (DONE)
+Service - service (DONE)
+Contact - Kontact (DONE)
+References - Referzen 
+Default*
+
 
 
 - - Archives

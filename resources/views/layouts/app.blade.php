@@ -1,7 +1,7 @@
 <!doctype html>
 <html {!! get_language_attributes() !!}>
   @include('partials.head')
-  <body @php body_class() @endphp>
+  <body @php body_class('font-body') @endphp>
     <div class="flex flex-col min-h-screen" role="document">
       @php do_action('get_header') @endphp
       @include('partials.header')

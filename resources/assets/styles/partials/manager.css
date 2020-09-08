@@ -1,0 +1,7 @@
+.manager {
+    &__info {
+        p {
+            @apply mb-0;
+        }
+    }
+}

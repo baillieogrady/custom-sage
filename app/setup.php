@@ -60,6 +60,7 @@ add_action('after_setup_theme', function () {
      */
     add_theme_support('post-thumbnails');
     add_image_size('display', 1080, 540, true);
+    add_image_size('domino', 570, 360, true);
 
     /**
      * Enable HTML5 markup support
@@ -200,3 +201,8 @@ remove_action( 'admin_print_styles', 'print_emoji_styles' );
 //         $query->set( 'posts_per_page', 1 );
 //     }
 // } );
+
+// google maps
+add_action('acf/init', function () {
+    acf_update_setting('google_api_key', 'AIzaSyBejyW7uzgmKFqYqcyCqoOlAcvTZ40eTyQ');
+});
