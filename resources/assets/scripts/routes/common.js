@@ -45,13 +45,13 @@ export default {
     // });
 
     // nav button
-    // const navButton = document.getElementsByClassName('nav__button')[0],
-    //   nav = document.getElementsByClassName('nav')[0];
+    const navButton = document.querySelector('.nav__button'),
+      nav = document.querySelector('.nav');
 
-
-    // navButton.addEventListener('click', function () {
-    //   nav.classList.toggle('block');
-    // })
+    navButton.addEventListener('click', function (e) {
+      e.preventDefault();
+      nav.classList.toggle('hidden');
+    })
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

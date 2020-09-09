@@ -3,10 +3,12 @@ module.exports = {
         container: {
             center: true,
             padding: {
-                default: '2.75rem',
+                default: '1.5rem',
+                lg: '2.75rem',
             },
         },
         screens: {
+            'lg': '1024px',
             'xl': '1200px',
         },
         fontFamily: {
@@ -55,6 +57,7 @@ module.exports = {
                 '-brand-4': '-1rem',
                 'brand-5': '1.25rem',
                 '-brand-24': '-4.8rem',
+                '-brand-8': '-2rem',
                 'brand-10': '2.5rem',
                 '-brand-12': '-2.75rem',
                 'brand-40': '9.375rem',
@@ -66,6 +69,7 @@ module.exports = {
                 'brand-160': '40rem',
             },
             width: {
+                'brand-48': '12.5rem',
                 'brand-76': '19rem',
                 'brand-128': '32rem',
                 'brand-almost-full': '98%',

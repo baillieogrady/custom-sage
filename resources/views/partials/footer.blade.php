@@ -6,34 +6,34 @@
   $instagram = get_field('instagram', 'options');
 @endphp
 
-<footer class="footer bg-brand-primary pt-brand-8 text-white text-xs">
+<footer class="footer bg-brand-primary pb-brand-8 lg:pb-0 pt-brand-8 text-white text-xs">
   <div class="container">
-    <div class="flex justify-between">
+    <div class="flex flex-wrap lg:flex-no-wrap justify-between">
       <div>
-        <a href="tel:012661267" class="mb-6 inline-block relative -left-brand-4">
-          <img data-src="@asset('images/24.svg')" alt="" class="lazy" />
+        <a href="tel:012661267" class="mb-6 inline-block relative lg:-left-brand-4">
+          <img data-src="@asset('images/24.svg')" alt="24" class="lazy" />
         </a>
         <div>
           {!! $text !!}
         </div>
       </div>
-      <div>
-        <img src="{{ $footer_logo['url'] }}" alt="{{ $footer_logo['alt'] }}" class="h-8 footer__logo">
-        <div class="footer__images flex justify-between w-full mt-16">
-          <img src="@asset('images/ovi.svg')" alt="Ovi">
-          <img src="@asset('images/rics.png')" alt="Rics">
+      <div class="mt-12 lg:mt-0">
+        <img data-src="{{ $footer_logo['url'] }}" alt="{{ $footer_logo['alt'] }}" class="h-8 footer__logo lazy">
+        <div class="footer__images flex flex-wrap lg:flex-no-wrap justify-between w-full mt-12 lg:mt-16">
+          <img data-src="@asset('images/ovi.svg')" alt="Ovi" class="lazy">
+          <img data-src="@asset('images/rics.png')" alt="Rics" class="mt-8 mb-12 lazy lg:mt-0 lg:mb-0">
         </div>
       </div>
-      <div class="mt-5">
-        <ul class="list-none flex justify-end mb-2">
+      <div class="mt-5 lg:mt-0">
+        <ul class="list-none flex lg:justify-end mb-2">
           <li class="inline-block">
-            <a href="{{ $facebook }}"><img src="@asset('images/fb.svg')" alt="Facebook"></a>
+            <a href="{{ $facebook }}"><img data-src="@asset('images/fb.svg')" alt="Facebook" class="lazy"></a>
           </li>
           <li class="inline-block ml-1">
-            <a href="{{ $instagram }}"><img src="@asset('images/insta.svg')" alt="Instagram"></a>
+            <a href="{{ $instagram }}"><img data-src="@asset('images/insta.svg')" alt="Instagram" class="lazy"></a>
           </li>
         </ul>
-        <nav class="text-right mb-4">
+        <nav class="lg:text-right mb-4">
           @if (has_nav_menu('secondary_navigation'))
             {!! wp_nav_menu([
               'theme_location' => 'secondary_navigation',

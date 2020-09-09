@@ -5,20 +5,21 @@
 @php
   $hero = get_field('hero');
   $headings = get_field('headings');
+  $form = get_field('form');
   $location = get_field('location');
 @endphp
 
 @extends('layouts.app')
 
 @section('content')
-    <div class="hero bg-center bg-no-repeat bg-cover mb-brand-24" style="background-image: url('{{ $hero['background_image']['sizes']['large'] }}');"></div>
-    <section>
-        <div class="text-center mb-brand-24">
+    <div class="hero bg-center bg-no-repeat bg-cover mb-12 lg:mb-brand-24" style="background-image: url('{{ $hero['background_image']['sizes']['large'] }}');"></div>
+    <section class="container">
+        <div class="lg:text-center mb-brand-24">
             <h1 class="font-averta mb-4">{{ $headings['heading'] }}</h1>
-            <p class="ml-16 text-brand-display leading-none text-brand-primary font-display">{{ $headings['lead'] }}</p>
+            <p class="lg:ml-16 text-4xl lg:text-brand-display leading-none text-brand-primary font-display">{{ $headings['lead'] }}</p>
         </div>
     </section>
-    <form action="#" class="border-r-4 border-b-4 border-t-4 border-brand-primary py-brand-24 px-16 w-brand-almost-full relative mb-brand-40">
+    {{-- <form action="#" class="border-r-4 border-b-4 border-t-4 border-brand-primary py-brand-24 px-16 w-brand-almost-full relative mb-brand-40">
       <div>
         <div class="flex justify-between -mx-8">
           <div class="px-8 mb-8 w-1/3">
@@ -73,13 +74,16 @@
         </div>
         <input type="submit" value="ABSCHICKEN" class="absolute bg-brand-primary text-white left-brand-1/2 bottom-0 transform -translate-x-1/2 translate-y-1/2 py-2 px-5 cursor-pointer">
       </div>
-    </form>
-    <section class="contact mb-brand-40">
+    </form> --}}
+    <div class="container mb-12 lg:mb-brand-40">
+      {!! $form['shortcode'] !!}
+    </div>
+    <section class="contact mb-12 lg:mb-brand-40">
       <div class="container">
-        <div class="w-10/12 mx-auto">
+        <div class="lg:w-10/12 mx-auto">
           @foreach ($location['items'] as $item)
-            <div class="flex -mx-5 mb-10 text-xl">
-              <div class="px-5 w-1/2">
+            <div class="lg:flex -mx-5 mb-10 text-xl">
+              <div class="px-5 pb-5 lg:pb-0 lg:w-1/2">
                 <div class="bg-brand-grey">
                   <p class="bg-brand-secondary-75 text-center inline-block px-brand-12 mt-6 relative -left-brand-3 mb-0 py-1 font-semibold">{{ $item['heading'] }}</p>
                   <div class="p-8">
@@ -104,7 +108,7 @@
                   </div>
                 </div>
               </div>
-              <div class="px-5 w-1/2">
+              <div class="px-5 lg:w-1/2">
                 <div class="acf-map" data-zoom="16">
                     <div class="marker" data-lat="<?php echo esc_attr($item['map']['lat']); ?>" data-lng="<?php echo esc_attr($item['map']['lng']); ?>"></div>
                 </div>
@@ -114,7 +118,7 @@
         </div>
       </div>
     </section>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBejyW7uzgmKFqYqcyCqoOlAcvTZ40eTyQ"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKfRtJI92vVkgBMtsl-0Zwbu6DITIlvR4"></script>
 <script type="text/javascript">
 (function( $ ) {
 

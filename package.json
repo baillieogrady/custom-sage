@@ -96,6 +96,7 @@
     "custom-event-polyfill": "^1.0.7",
     "jquery": "^3.3.1",
     "lozad": "^1.14.0",
+    "postcss-simple-vars": "^5.0.2",
     "prop-types": "^15.7.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"

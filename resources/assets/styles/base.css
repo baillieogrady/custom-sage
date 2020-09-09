@@ -1,15 +1,36 @@
 body {
-    @apply text-2xl leading-normal;
+    @apply  leading-normal;
 }
 
 h1 {
-    @apply text-brand-h1 leading-snug;
+    @apply text-2xl;
 }
 
 h2 {
-    @apply text-brand-h2 leading-tight;
+    @apply text-2xl leading-tight;
 }
 
+
 p {
-    @apply mb-brand-10;
+    @apply mb-4;
+}
+
+
+@screen lg {
+    body {
+        @apply text-2xl;
+    }
+
+    p {
+        @apply mb-brand-10;
+    }
+
+    h1 {
+        @apply text-brand-h1;
+    }
+
+    h2 {
+        @apply text-brand-h2 leading-tight;
+    }
+
 }

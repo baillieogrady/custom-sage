@@ -204,5 +204,9 @@ remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 // google maps
 add_action('acf/init', function () {
-    acf_update_setting('google_api_key', 'AIzaSyBejyW7uzgmKFqYqcyCqoOlAcvTZ40eTyQ');
+    acf_update_setting('google_api_key', 'AIzaSyAKfRtJI92vVkgBMtsl-0Zwbu6DITIlvR4');
 });
+
+
+
+// AIzaSyBejyW7uzgmKFqYqcyCqoOlAcvTZ40eTyQ

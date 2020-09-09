@@ -1,3 +1,9 @@
 .hero {
-    height: 316px;
+    @apply h-64;
+}
+
+@screen lg {
+    .hero {
+        height: 316px;
+    }
 }

@@ -6,7 +6,9 @@ Base (DONE)
 Global fields (DONE)
 page templates (DONE)
 Fonts (DONE)
+Default (DONE)
 Responsive
+CPT setup
 Optimise
 Handover
 
@@ -31,12 +33,10 @@ Footer
 
 Home - startseite (DONE)
 Company - Ueber (DONE)
-Service - service (DONE)
-Contact - Kontact (DONE)
-References - Referzen 
-Default*
-
-
+Service - service  (DONE)
+Contact - Kontact
+References - Referzen (DONE)
+Default (DONE)
 
 - - Archives
 
@@ -53,4 +53,4 @@ Real estate finder single - postponed
 
 
 - - Global
-Banner - home (exclude from contact page)
+Banner - home (exclude from contact page) (DONE)

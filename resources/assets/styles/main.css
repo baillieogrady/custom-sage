@@ -18,6 +18,9 @@
 @import 'partials/map.css';
 @import 'partials/contact.css';
 
+/* vendor */
+/* @import '/vendor/form/gravity.css'; */
+
 /*! purgecss end ignore  */
 
 @import 'tailwindcss/components';

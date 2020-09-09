@@ -10,6 +10,7 @@ module.exports = ({ file, options }) => {
     plugins: {
       'postcss-import': {},
       'postcss-nested': {},
+      'postcss-simple-vars': {},
       autoprefixer: true,
       cssnano: options.enabled.optimize ? cssnanoConfig : false,
       tailwindcss: `${options.paths.assets}/styles/tailwind.js`,

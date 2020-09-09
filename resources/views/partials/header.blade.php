@@ -3,23 +3,20 @@
   $header_logo = get_field('logo', 'options');
 @endphp
 
-<header class="bg-brand-primary w-full relative py-brand-20">
+<header class="bg-brand-primary w-full py-4 lg:py-8 sticky top-0 z-50">
   <div class="container">
-    <div class="flex items-center">
-      <a class="inline-block absolute top-brand-1/2 left-brand-1/2 transform -translate-x-1/2 -translate-y-1/2" href="{{ home_url('/') }}">
-        <img src="{{ $header_logo['url'] }}" alt="{{ $header_logo['alt'] }}" class="w-48">
-      </a>
-      <a href="#" class="burger inline-block">
+    <div class="flex justify-between items-center flex-wrap">
+      <a href="#" class="nav__button inline-block relative z-20">
         <span class="w-8 h-1 block bg-white"></span>
         <span class="w-8 h-1 block bg-white mt-1"></span>
         <span class="w-8 h-1 block bg-white mt-1"></span>
       </a>
-        {{-- <div class="block lg:hidden">
-        <button class="nav__button flex items-center border rounded border-transparent outline-none">
-          <svg class="fill-current h-5 w-5 outline-none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-        </button>
-      </div> --}}
-      {{-- <nav class="nav text-menu tracking-tight mt-8 lg:mt-0">
+      <div class="lg:flex-grow lg:text-center lg:relative lg:-left-brand-8">
+        <a class="inline-block" href="{{ home_url('/') }}">
+          <img data-src="{{ $header_logo['url'] }}" alt="{{ $header_logo['alt'] }}" class="w-24 lg:w-brand-48 lazy">
+        </a>
+      </div>
+      <nav class="nav text-menu tracking-tight w-full flex-grow bottom-0 hidden">
         @if (has_nav_menu('primary_navigation'))
           {!! wp_nav_menu([
             'theme_location' => 'primary_navigation',
@@ -28,7 +25,7 @@
           ]) 
         !!}
         @endif
-      </nav> --}}
+      </nav>
     </div>
   </div>
 </header>

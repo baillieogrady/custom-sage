@@ -1,69 +1,24 @@
-/* .nav {
-    @apply w-full hidden flex-grow;
+.nav {
+    @apply pt-4;
+    a {
+        @apply block no-underline mb-3 text-lg transition ease-in duration-200 text-white;
+        &:hover {
+            @apply opacity-75;
+        }
+    }
     > ul {
         @apply list-none ml-0 inline;
         > li {
             @apply m-0 mb-2;
         }
         > li.current-menu-item > a {
-            @apply text-brand-blue;
+            @apply text-brand-secondary;
         }
-    }
-    li::before {
-        content: '';
-        @apply m-0;
-    }
-    a {
-        @apply block no-underline mb-3 text-lg transition ease-in duration-200;
-        &:hover {
-            @apply text-brand-blue;
-        }
-    }
-}
-
-.sub-menu {
-    @apply left-0 z-10 bg-white px-3 m-0;
-    li {
-        @apply p-0 py-1 m-0;
-    }
-    > li.current-menu-item > a {
-        @apply text-brand-blue;
-    }
-    a {
-        @apply p-0 border-none border-0;
     }
 }
 
 @screen lg {
     .nav {
-        @apply w-auto inline flex-grow-0;
-        > ul {
-            > li {
-                @apply inline-block m-0 pl-3 pr-3;
-                > a {
-                    @apply inline-block pb-10 pt-8 border-t-8 border-transparent;
-                }
-            }
-            li.current-menu-item > a {
-                @apply text-brand-blue;
-            }
-        }
-        a {
-            @apply mb-0 text-xl;
-        }
-    }
-
-    .sub-menu {
-        @apply hidden absolute;
-        li:nth-child(odd) {
-            @apply border-b;
-        }
+        @apply pt-8;
     }
 }
-
-.menu-item-has-children {
-    @apply relative;
-    &:hover .sub-menu {
-        @apply block;
-    }
-} */
